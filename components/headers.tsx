@@ -14,7 +14,7 @@ const menuItems = [
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-black p-3">
+    <header className="bg-black p-3 border-b border-gray-500">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link key='top' href='/'>

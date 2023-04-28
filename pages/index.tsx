@@ -1,55 +1,47 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
-import type { NextPage } from "next";
-import styles from "../styles/Home.module.css";
+// pages/index.tsx
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 
-const Home: NextPage = () => {
+const images = [
+  '/image1.jpg',
+  '/image2.jpg',
+  '/image3.jpg',
+  '/image4.jpg',
+  '/image5.jpg',
+];
+
+const HomePage: React.FC = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 8000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className="text-3xl font-sansita underline">
-          Welcome to <a href="http://thirdweb.com/">thirdweb</a>!
-        </h1>
-
-        <p className={styles.description}>
-          Get started by configuring your desired network in{" "}
-          <code className={styles.code}>pages/_app.tsx</code>, then modify the{" "}
-          <code className={styles.code}>pages/index.tsx</code> file!
-        </p>
-
-        <div className={styles.connect}>
-          <ConnectWallet />
+    <div>
+      <Head>
+        <title>Megaranica World</title>
+      </Head>
+      <div className="bg-black min-h-screen flex flex-col md:flex-row">
+        <div className="w-full md:w-1/2 p-3">
+          <h1 className="text-5xl md:text-7xl m-1 md:m-8 font-sansita leading-tight">Welcome to MEGARANICA!</h1>
+          <p className="m-1 md:m-8 text-1xl md:text-3xl leading-normal">
+            "Gesyu's megaranica friends!" is an NFT character content created by Japanese artist gesyutaruto.<br />It features a cute but somewhat poisonous world. Why don't you enjoy the world I create?
+          </p>
         </div>
-
-        <div className={styles.grid}>
-          <a href="https://portal.thirdweb.com/" className={styles.card}>
-            <h2>Portal &rarr;</h2>
-            <p>
-              Guides, references and resources that will help you build with
-              thirdweb.
-            </p>
-          </a>
-
-          <a href="https://thirdweb.com/dashboard" className={styles.card}>
-            <h2>Dashboard &rarr;</h2>
-            <p>
-              Deploy, configure and manage your smart contracts from the
-              dashboard.
-            </p>
-          </a>
-
-          <a
-            href="https://portal.thirdweb.com/templates"
-            className={styles.card}
-          >
-            <h2>Templates &rarr;</h2>
-            <p>
-              Discover and clone template projects showcasing thirdweb features.
-            </p>
-          </a>
+        <div className="w-full md:w-1/2 p-5 md:m-8">
+          <img
+            src={images[currentImageIndex]}
+            alt="Slideshow Image"
+            className="w-full object-scale-down"
+          />
         </div>
-      </main>
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default HomePage;
