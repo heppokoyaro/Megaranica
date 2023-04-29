@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 
 const images = [
-  '/image1.jpg',
-  '/image2.jpg',
-  '/image3.jpg',
-  '/image4.jpg',
-  '/image5.jpg',
+  '/home/image1.jpg',
+  '/home/image2.jpg',
+  '/home/image3.jpg',
+  '/home/image4.jpg',
+  '/home/image5.jpg',
 ];
 
 const HomePage: React.FC = () => {
