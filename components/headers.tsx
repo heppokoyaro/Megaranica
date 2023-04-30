@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 import { Menu } from '@headlessui/react';
 import { MenuIcon, HeartIcon, HomeIcon } from '@heroicons/react/solid';
 import { ConnectWallet } from "@thirdweb-dev/react";
@@ -13,6 +14,8 @@ const menuItems = [
 ];
 
 const Header: React.FC = () => {
+  const router = useRouter();
+
   return (
     <header className="bg-black p-3 border-b border-gray-500">
       <div className="container mx-auto">
@@ -31,7 +34,9 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex items-center">
             {menuItems.map((item) => (
               <Link key={item.name} href={item.href} passHref>
-                <span className='text-white text-lg px-3'>
+                <span className={`text-lg px-3 ${
+                  router.pathname === item.href ? 'text-pink-500' : 'text-white'
+                }`}>
                   {item.name}
                 </span>
               </Link>

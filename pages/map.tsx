@@ -10,7 +10,7 @@ const Map: React.FC = () => {
   ];
   
   const areas = [
-    { shape: 'rect', coords: '66,329,347,639', href: '/', alt: 'Megaranica Japan' },
+    { shape: 'rect', coords: '66,329,347,639', href: '/claim', alt: 'Megaranica Japan' },
     { shape: 'rect', coords: '100,64,368,245', href: '/', alt: 'Snail Ice Planet' },
     { shape: 'rect', coords: '435,96,959,638', href: '/', alt: 'Magical Daemon Land' },
   ];

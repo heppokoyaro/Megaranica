@@ -28,8 +28,8 @@ const ImageMap: React.FC<Props> = ({ MapImage, MobileImage, alt, mapName, areas,
   // ウィンドウサイズが変わったときにリンク範囲を更新するためのuseEffect
   useEffect(() => {
     if (!isMobile) {
-      const handleResize = () => {
-        if (imgRef.current) {
+      const initArea = () => {
+        if (imgRef.current && imgRef.current.complete) {
           // 画像の現在の幅と元の幅の比率を計算
           const scale = imgRef.current.clientWidth / imgRef.current.naturalWidth;
           // 新しいエリア座標を計算
@@ -45,9 +45,15 @@ const ImageMap: React.FC<Props> = ({ MapImage, MobileImage, alt, mapName, areas,
         }
       };
 
+      const handleResize = () => {
+        initArea();
+      };
+
+      // 初期化
+      initArea();
+
       // イベントリスナーを追加
       window.addEventListener('resize', handleResize);
-      handleResize();
 
       // イベントリスナーをクリーンアップ
       return () => {
@@ -82,7 +88,6 @@ if (isMobile) {
     </div>
   );
 }
-
 
   // デスクトップデバイスの場合の表示
   return (
