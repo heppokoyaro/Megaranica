@@ -4,14 +4,24 @@ import Link from 'next/link';
 const cards = [
   // 他のカードのデータを追加する場合は、ここにオブジェクトを追加する。
   {
-    image: 'claim/1.png',
+    image: 'claim/1dark.png',
     title: 'Megaranica 1st NFT PJ',
     link: '/', // このリンクは実際のリンク先に置き換える。
   },
   {
-    image: 'claim/1.png',
-    title: 'Megaranica 1st NFT PJ',
-    link: '/', // このリンクは実際のリンク先に置き換える。
+    image: 'claim/cardbg.png',
+    title: '',
+    link: '', // このリンクは実際のリンク先に置き換える。
+  },
+  {
+    image: 'claim/cardbg.png',
+    title: '',
+    link: '', // このリンクは実際のリンク先に置き換える。
+  },
+  {
+    image: 'claim/cardbg.png',
+    title: '',
+    link: '', // このリンクは実際のリンク先に置き換える。
   },
 ];
 
