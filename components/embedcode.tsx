@@ -11,11 +11,7 @@ import { ethers } from "ethers";
 import Counter from "../components/counter";
 import { Dialog } from "@headlessui/react";
 
-interface EmbedCodeProps {
-  src: string; // NFT contract address
-}
-
-const EmbedCode: React.FC<EmbedCodeProps> = ({ src }) => {
+const EmbedCode: React.FC = () => {
   const contractAddress = "0xFa4d9De5f022F8db8f895B1b12f9Ddb48d28Cb46";
   const [counterValue, setCounterValue] = useState(0);
   const [error, setError] = useState<string | null>(null);
