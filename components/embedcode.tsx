@@ -37,11 +37,10 @@ const EmbedCode: React.FC = () => {
           <img
             className="h-48 w-full object-cover md:h-full md:w-48"
             src={imageSrc}
-            alt="Image between Price and Counter"
+            alt="NFT Image"
           />
         </div>
         <div className="p-8">
-          {/* <h1 className="text-2xl font-semibold mb-4">Claim Phases</h1> */}
           {!loadingClaimPhase ? (
             claimPhase && (
               <div>
