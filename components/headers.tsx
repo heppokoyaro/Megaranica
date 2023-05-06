@@ -10,7 +10,7 @@ const menuItems = [
   { name: 'Baggage', href: '/baggage' },
   { name: 'Story', href: '/story' },
   { name: 'NFT', href: '/claim' },
-  { name: 'About Us', href: '/aboutus' },
+  { name: 'About Us', href: '/team' },
 ];
 
 const Header: React.FC = () => {
