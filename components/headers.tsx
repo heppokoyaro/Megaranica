@@ -53,7 +53,7 @@ const Header: React.FC = () => {
                 </Menu.Button>
                 {open && (
                   <Menu.Items
-                    className="origin-top-left absolute right-0 mt-2 w-28 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                    className="origin-top-left absolute right-0 mt-2 w-28 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
                     static
                   >
                     <div className="py-1">
