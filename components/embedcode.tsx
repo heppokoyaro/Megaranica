@@ -9,7 +9,6 @@ import {
 } from "@thirdweb-dev/react";
 import { ethers } from "ethers";
 import Counter from "../components/counter";
-import { Dialog } from "@headlessui/react";
 
 const EmbedCode: React.FC = () => {
   const contractAddress = "0xFa4d9De5f022F8db8f895B1b12f9Ddb48d28Cb46";
@@ -25,96 +24,83 @@ const EmbedCode: React.FC = () => {
       quantity: counterValue,
     }
   );
-  const isButtonDisabled = !(!loadingEligibility && eligibility?.length === 0);
+  const isButtonDisabled = loadingEligibility || eligibility?.length !== 0;
   const handleValueChange = (value: number) => {setCounterValue(value);};
   const handleError = (errorMessage: string) => {setError(errorMessage);};
+  const imageSrc = "/mint/icon.png"; // Replace with your desired image URL
 
-  if (!address) return <div>No wallet connected</div>;
+  if (!address) return <div className="text-black">No wallet connected</div>;
   return (
-    <div>
-      <h1>Claim Phases</h1>
-      {!loadingClaimPhase ? (
-        claimPhase && (
-          <div>
-            <p>Phase name: {claimPhase.metadata?.name}</p>
-            <p>Supply: {claimPhase.availableSupply}</p>
-            <p>
-              Price: {ethers.utils.formatUnits(claimPhase.price)}{" "}
-              {claimPhase.currencyMetadata.symbol}
-            </p>
-          </div>
-        )
-      ) : (
-        <p>Loading...</p>
-      )}
-      <div className="container mx-auto p-4">
-        <h1 className="text-2xl mb-4">Counter:</h1>
-        <Counter min={0} max={3} onValueChange={handleValueChange} />
-      </div>
-
-      <div>
-        <Web3Button
-          contractAddress={contractAddress}
-          action={async (contract) => {
-            try {
-              await contract.erc721.claim(counterValue);
-            } catch (error: unknown) {
-              if (error instanceof Error) {
-                handleError(error.message);
-              } else {
-                handleError('An unknown error occurred.');
-              }
-            }
-          }}
-          isDisabled={isButtonDisabled}
-          theme="light"
-        >
-          Claim
-        </Web3Button>
-      </div>
-
-      <div>
-        {!loadingEligibility ? (
-          <>
-            {eligibility?.length === 0 ? (
-              <p>Eligible to claim.</p>
-            ) : (
-              eligibility?.map((reason) => {
-                return <p key={reason}>{reason}</p>;
-              })
-            )}
-          </>
-        ) : (
-          <p>Loading...</p>
-        )}
-      </div>
-
-      {/* {error && (
-        <Dialog
-          as="div"
-          className="fixed inset-0 z-10 overflow-y-auto"
-          open={!!error}
-          onClose={() => setError(null)}
-          >
-            <div className="min-h-screen px-4 text-center">
-              <Dialog.Overlay className="fixed inset-0 bg-black opacity-30" />
-              <div className="w-full max-w-md p-6 my-8 mx-auto bg-white rounded-xl shadow-md">
-                <Dialog.Title className="text-xl font-bold">Error</Dialog.Title>
-                <div className="mt-4">
-                  <p>{error}</p>
-                </div>
-                <div className="mt-6">
-                  <button
-                    className="px-4 py-2 text-white bg-red-600 rounded hover:bg-red-700"
-                    onClick={() => setError(null)}
-                  >
-                    Close
-                  </button>
-                </div>
+    <div className="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl text-black">
+      <div className="md:flex">
+        <div className="md:flex-shrink-0">
+          <img
+            className="h-48 w-full object-cover md:h-full md:w-48"
+            src={imageSrc}
+            alt="Image between Price and Counter"
+          />
+        </div>
+        <div className="p-8">
+          {/* <h1 className="text-2xl font-semibold mb-4">Claim Phases</h1> */}
+          {!loadingClaimPhase ? (
+            claimPhase && (
+              <div>
+                <p>Phase name: {claimPhase.metadata?.name}</p>
+                <p>Supply: {claimPhase.availableSupply}</p>
+                <p>
+                  Price: {ethers.utils.formatUnits(claimPhase.price)}{" "}
+                  {claimPhase.currencyMetadata.symbol}
+                </p>
               </div>
-            </div>
-        </Dialog>
-      )} */}
+            )
+          ) : (
+            <p>Loading...</p>
+          )}
+          <div className="container mx-auto">
+            <h1 className="mb-2">Quantity:</h1>
+            <div className="flex items-center justify-center">
+              <Counter min={0} max={3} onValueChange={handleValueChange} />
+            </div>          
+          </div>
+
+          <div className="text-center p-4">
+            <Web3Button
+              contractAddress={contractAddress}
+              action={async (contract) => {
+                try {
+                  await contract.erc721.claim(counterValue);
+                } catch (error: unknown) {
+                  if (error instanceof Error) {
+                    handleError(error.message);
+                  } else {
+                    handleError('An unknown error occurred.');
+                  }
+                }
+              }}
+              isDisabled={isButtonDisabled}
+              theme="light"
+            >
+              Claim
+            </Web3Button>
+          </div>
+
+          <div>
+            {!loadingEligibility ? (
+              <>
+                {eligibility?.length === 0 ? (
+                  <p className="text-green-600">Eligible to claim.</p>
+                ) : (
+                  eligibility?.map((reason) => {
+                    return <p key={reason} className="text-red-600">{reason}</p>;
+                  })
+                )}
+              </>
+            ) : (
+              <p>Loading...</p>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

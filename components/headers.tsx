@@ -9,7 +9,7 @@ const menuItems = [
   { name: 'Map', href: '/map' },
   { name: 'Baggage', href: '/baggage' },
   { name: 'Story', href: '/story' },
-  { name: 'NFT', href: '/nft' },
+  { name: 'NFT', href: '/claim' },
   { name: 'About Us', href: '/aboutus' },
 ];
 

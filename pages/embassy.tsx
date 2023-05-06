@@ -20,7 +20,7 @@ const EmbassyPage: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[url('/mint/bg_small.png')] bg-center bg-no-repeat">
-      <div className="w-full md:w-1/3 lg:w-1/3 text-red-600 text-4xl">
+      <div className="w-full md:w-3/5 lg:w-3/5 text-2xl flex items-center justify-center ml-auto">
         <EmbedCode />
       </div>
     </div>
