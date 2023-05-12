@@ -31,7 +31,7 @@ const Counter: React.FC<CounterProps> = ({ min, max, onValueChange }) => {
     <div className="flex items-center">
       <button
         onClick={decrement}
-        className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-l flex items-center"
+        className="bg-megaranica hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-l flex items-center"
       >
         <ChevronDownIcon className="w-5 h-5" aria-hidden="true" />
       </button>
@@ -43,7 +43,7 @@ const Counter: React.FC<CounterProps> = ({ min, max, onValueChange }) => {
       />
       <button
         onClick={increment}
-        className="bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-r flex items-center"
+        className="bg-megaranica hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-r flex items-center"
       >
         <ChevronUpIcon className="w-5 h-5" aria-hidden="true" />
       </button>

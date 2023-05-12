@@ -31,7 +31,7 @@ const EmbedCode: React.FC = () => {
 
   if (!address) return <div className="text-black">No wallet connected</div>;
   return (
-    <div className="max-w-md mx-auto bg-white rounded-xl shadow-2xl overflow-hidden md:max-w-2xl text-black">
+    <div className="max-w-md mx-auto bg-mintcard rounded-xl shadow-2xl overflow-hidden md:max-w-2xl text-black">
       <div className="md:flex">
         <div className="md:flex-shrink-0">
           <img

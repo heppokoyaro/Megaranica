@@ -17,14 +17,14 @@ const Header: React.FC = () => {
   const router = useRouter();
 
   return (
-    <header className="bg-black p-3 border-b border-gray-500">
+    <header className="bg-megaranica p-3 border-b border-gray-500">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link key='top' href='/'>
             <div className="hidden md:flex">
               <HeartIcon className="text-white w-9 h-9 my-auto mx-3"/>
               <span className="text-white text-2xl md:text-4xl font-sansita">
-                MEGARANICA
+                Megaranica
               </span>
             </div>
             <div className="flex md:hidden">

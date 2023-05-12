@@ -24,12 +24,12 @@ const Map: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>Megaranica World</title>
+        <title>Megaranica's Map</title>
       </Head>
-      <div className='flex justify-center items-center'>
-        <h1 className="text-4xl md:text-6xl m-2 font-sansita leading-tight">Megaranica's Map</h1>
+      <div className='flex justify-center items-center bg-megaranica'>
+        <h1 className="text-4xl md:text-6xl m-2 font-sansita leading-tight text-white">Megaranica's Map</h1>
       </div>
-      <div className="container mx-auto bg-black">
+      <div className="container mx-auto bg-megaranica">
         <ImageMap
           MapImage="/map/map.png"
           MobileImage={mobileImages}
