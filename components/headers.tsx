@@ -7,10 +7,9 @@ import { ConnectWallet } from "@thirdweb-dev/react";
 
 const menuItems = [
   { name: 'Map', href: '/map' },
-  { name: 'Baggage', href: '/baggage' },
   { name: 'Story', href: '/story' },
-  { name: 'NFT', href: '/claim' },
-  { name: 'About Us', href: '/team' },
+  { name: 'MyPage', href: '/mypage' },
+  // { name: 'About Us', href: '/team' },
 ];
 
 const Header: React.FC = () => {
@@ -41,6 +40,35 @@ const Header: React.FC = () => {
                 </span>
               </Link>
             ))}
+            <Menu as="div" className="relative">
+              <Menu.Button className="text-lg px-3 text-white">
+                More
+              </Menu.Button>
+              <Menu.Items className="absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+                <Menu.Item>
+                  {({ active }) => (
+                    <Link href='/team' passHref>
+                      <span className={`${
+                        active ? 'bg-gray-500 text-white' : 'text-gray-900'
+                      } block px-4 py-2 text-sm`}>
+                        About Us
+                      </span>
+                    </Link>
+                  )}
+                </Menu.Item>
+                <Menu.Item>
+                  {({ active }) => (
+                    <Link href='/wp' passHref>
+                      <span className={`${
+                        active ? 'bg-gray-500 text-white' : 'text-gray-900'
+                      } block px-4 py-2 text-sm`}>
+                        WP
+                      </span>
+                    </Link>
+                  )}
+                </Menu.Item>
+              </Menu.Items>
+            </Menu>
             <div className='px-2'>
               <ConnectWallet />
             </div>
@@ -73,6 +101,28 @@ const Header: React.FC = () => {
                           )}
                         </Menu.Item>
                       ))}
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link href='/team' passHref>
+                            <span className={`${
+                              active ? 'bg-gray-500 text-white' : 'text-gray-900'
+                            } block px-4 py-2 text-sm`}>
+                              About Us
+                            </span>
+                          </Link>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <Link href='/wp' passHref>
+                            <span className={`${
+                              active ? 'bg-gray-500 text-white' : 'text-gray-900'
+                            } block px-4 py-2 text-sm`}>
+                              WP
+                            </span>
+                          </Link>
+                        )}
+                      </Menu.Item>
                     </div>
                   </Menu.Items>
                 )}
