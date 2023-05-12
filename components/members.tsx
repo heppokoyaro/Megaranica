@@ -5,36 +5,29 @@ type Member = {
   title: string;
   profileImage: string;
   twitter: string;
-  instagram: string;
+  profile: string;
 };
 
 export const members: Member[] = [
   {
-    name: "Alice",
-    title: "CEO",
-    profileImage: "/images/alice.jpg",
-    twitter: "https://twitter.com/alice",
-    instagram: "https://www.instagram.com/alice",
+    name: "Gesyutaruto",
+    title: "ILLUSTRATOR",
+    profileImage: "/team/gesyutaruto.png",
+    twitter: "https://twitter.com/furagu2525",
+    profile: "イラストレーター。メガラニカの世界観を表現するために、キャラクターのデザインを担当。"
   },
   {
-    name: "Bob",
-    title: "CTO",
-    profileImage: "/images/bob.jpg",
-    twitter: "https://twitter.com/bob",
-    instagram: "https://www.instagram.com/bob",
+    name: "あゆせ",
+    title: "CO-FOUNDER",
+    profileImage: "/team/ayuse.png",
+    twitter: "https://twitter.com/ayuse_crypto",
+    profile: "可愛いものが好き。ファウンダーとして毎日活動している良い人。",
   },
   {
-    name: "Carol",
-    title: "CFO",
-    profileImage: "/images/carol.jpg",
-    twitter: "https://twitter.com/carol",
-    instagram: "https://www.instagram.com/carol",
-  },
-  {
-    name: "David",
-    title: "CMO",
-    profileImage: "/images/david.jpg",
-    twitter: "https://twitter.com/david",
-    instagram: "https://www.instagram.com/david",
+    name: "heppokoyaro",
+    title: "ENGINEER",
+    profileImage: "/team/heppokoyaro.png",
+    twitter: "https://twitter.com/CryptoHamHepyar",
+    profile: "少しプログラムができるハムスター。メガラニカのサイトを作成している。",
   },
 ];
