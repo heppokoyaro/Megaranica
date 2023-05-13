@@ -13,10 +13,10 @@ const TeamPage: React.FC = () => {
         {members.map((member, index) => (
           <div key={index} className="bg-white p-4 rounded-lg shadow-md flex flex-col justify-between">
             <div>
-              <div className="h-72 flex items-center justify-center">
+              <div className="flex items-center justify-center">
                 <img src={member.profileImage} alt={member.name} className="max-w-full max-h-full object-cover rounded-xl mx-auto" />
               </div>
-              <h2 className="text-xl font-bold mt-4 text-black">{member.name}</h2>
+              <h2 className="text-xl font-bold mt-2 text-black">{member.name}</h2>
               <p className="text-pink-400">{member.title}</p>
             </div>
             <div className="flex-grow">
