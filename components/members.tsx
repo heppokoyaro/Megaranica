@@ -5,6 +5,7 @@ type Member = {
   title: string;
   profileImage: string;
   twitter: string;
+  opensea: string;
   profile: string;
 };
 
@@ -14,6 +15,7 @@ export const members: Member[] = [
     title: "ILLUSTRATOR",
     profileImage: "/team/gesyutaruto.png",
     twitter: "https://twitter.com/furagu2525",
+    opensea: "https://opensea.io/collection/gesyu-s-megaranica-friends",
     profile: "イラストレーター。メガラニカの世界観を表現するために、キャラクターのデザインを担当。"
   },
   {
@@ -21,6 +23,7 @@ export const members: Member[] = [
     title: "CO-FOUNDER",
     profileImage: "/team/ayuse.png",
     twitter: "https://twitter.com/ayuse_crypto",
+    opensea: "https://opensea.io/collection/tomatochan",
     profile: "可愛いものが好き。ファウンダーとして毎日活動している良い人。",
   },
   {
@@ -28,6 +31,7 @@ export const members: Member[] = [
     title: "ENGINEER",
     profileImage: "/team/heppokoyaro.png",
     twitter: "https://twitter.com/CryptoHamHepyar",
+    opensea: "https://opensea.io/collection/hamgra",
     profile: "少しプログラムができるハムスター。メガラニカのサイトを作成している。",
   },
 ];

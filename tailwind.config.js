@@ -22,7 +22,11 @@ module.exports = {
       backgroundColor: {
         'megaranica': '#111111',
         'mint': '#F9A9B5',
+        'mint': '#F66CC2',
         'mintcard': '#F5F5F5',
+      },
+      minHeight: {
+        'screen-75': '50vw',
       },
     },
   },
