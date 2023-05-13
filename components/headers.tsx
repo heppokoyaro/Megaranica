@@ -44,12 +44,12 @@ const Header: React.FC = () => {
               <Menu.Button className="text-lg px-3 text-white">
                 More
               </Menu.Button>
-              <Menu.Items className="absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+              <Menu.Items className="absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-megaranica ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
                 <Menu.Item>
                   {({ active }) => (
                     <Link href='/team' passHref>
                       <span className={`${
-                        active ? 'bg-gray-500 text-white' : 'text-gray-900'
+                        active ? 'bg-gray-500 text-white' : 'text-white'
                       } block px-4 py-2 text-sm`}>
                         About Us
                       </span>
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
                   {({ active }) => (
                     <Link href='/wp' passHref>
                       <span className={`${
-                        active ? 'bg-gray-500 text-white' : 'text-gray-900'
+                        active ? 'bg-gray-500 text-white' : 'text-white'
                       } block px-4 py-2 text-sm`}>
                         WP
                       </span>
@@ -81,7 +81,7 @@ const Header: React.FC = () => {
                 </Menu.Button>
                 {open && (
                   <Menu.Items
-                    className="origin-top-left absolute right-0 mt-2 w-28 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
+                    className="origin-top-left absolute right-0 mt-2 w-28 rounded-md shadow-lg bg-megaranica ring-1 ring-black ring-opacity-5 focus:outline-none z-10"
                     static
                   >
                     <div className="py-1">
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
                               <span className={`${
                                 active
                                   ? 'bg-gray-500 text-white'
-                                  : 'text-gray-900'
+                                  : 'text-white'
                                 } block px-4 py-2 text-sm`}
                               >
                                 {item.name}
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
                         {({ active }) => (
                           <Link href='/team' passHref>
                             <span className={`${
-                              active ? 'bg-gray-500 text-white' : 'text-gray-900'
+                              active ? 'bg-gray-500 text-white' : 'text-white'
                             } block px-4 py-2 text-sm`}>
                               About Us
                             </span>
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
                         {({ active }) => (
                           <Link href='/wp' passHref>
                             <span className={`${
-                              active ? 'bg-gray-500 text-white' : 'text-gray-900'
+                              active ? 'bg-gray-500 text-white' : 'text-white'
                             } block px-4 py-2 text-sm`}>
                               WP
                             </span>
