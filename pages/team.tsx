@@ -16,7 +16,7 @@ const TeamPage: React.FC = () => {
               <div className="flex items-center justify-center">
                 <img src={member.profileImage} alt={member.name} className="max-w-full max-h-full object-cover rounded-xl mx-auto" />
               </div>
-              <h2 className="text-xl font-bold mt-2 text-black">{member.name}</h2>
+              <h2 className="text-xl font-bold mt-4 text-black">{member.name}</h2>
               <p className="text-pink-400">{member.title}</p>
             </div>
             <div className="flex-grow">
