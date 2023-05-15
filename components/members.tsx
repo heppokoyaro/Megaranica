@@ -16,7 +16,7 @@ export const members: Member[] = [
     profileImage: "/team/gesyutaruto.png",
     twitter: "https://twitter.com/furagu2525",
     opensea: "https://opensea.io/collection/gesyu-s-megaranica-friends",
-    profile: "イラストレーター。メガラニカの世界観を表現するために、キャラクターのデザインを担当。"
+    profile: "画家、イラストレーター。カワイイけれど、どこか毒のある独自の世界観をテーマに創作活動を続ける。"
   },
   {
     name: "あゆせ",
