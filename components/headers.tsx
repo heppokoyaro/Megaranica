@@ -41,7 +41,9 @@ const Header: React.FC = () => {
               </Link>
             ))}
             <Menu as="div" className="relative">
-              <Menu.Button className="text-lg px-3 text-white">
+              <Menu.Button className={`text-lg px-3 ${
+                router.pathname === '/team' ? 'text-pink-500' : 'text-white'
+              }`}>
                 More
               </Menu.Button>
               <Menu.Items className="absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-megaranica ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
@@ -58,13 +60,13 @@ const Header: React.FC = () => {
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <Link href='https://exchubcrypto.wixsite.com/megaranica/wp' passHref>
+                    <a href='https://exchubcrypto.wixsite.com/megaranica/wp' target='_blank' rel='noopener noreferrer'>
                       <span className={`${
                         active ? 'bg-gray-500 text-white' : 'text-white'
                       } block px-4 py-2 text-sm`}>
                         WP
                       </span>
-                    </Link>
+                    </a>
                   )}
                 </Menu.Item>
               </Menu.Items>
@@ -114,13 +116,13 @@ const Header: React.FC = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <Link href='/wp' passHref>
+                          <a href='https://exchubcrypto.wixsite.com/megaranica/wp' target='_blank' rel='noopener noreferrer'>
                             <span className={`${
                               active ? 'bg-gray-500 text-white' : 'text-white'
                             } block px-4 py-2 text-sm`}>
                               WP
                             </span>
-                          </Link>
+                          </a>
                         )}
                       </Menu.Item>
                     </div>
