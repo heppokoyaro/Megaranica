@@ -58,7 +58,7 @@ const Header: React.FC = () => {
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <Link href='/wp' passHref>
+                    <Link href='https://exchubcrypto.wixsite.com/megaranica/wp' passHref>
                       <span className={`${
                         active ? 'bg-gray-500 text-white' : 'text-white'
                       } block px-4 py-2 text-sm`}>
