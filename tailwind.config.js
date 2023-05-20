@@ -24,6 +24,7 @@ module.exports = {
         'mint': '#F9A9B5',
         'mint': '#F66CC2',
         'mintcard': '#F5F5F5',
+        'story': '#5736EA',
       },
       minHeight: {
         'screen-75': '50vw',
