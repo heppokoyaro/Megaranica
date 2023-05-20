@@ -3,6 +3,7 @@ import { members } from '../components/members';
 import { FaTwitter, FaGlobe } from "react-icons/fa";
 import { SiOpensea } from "react-icons/si";
 import { Tweet } from 'react-twitter-widgets'
+import Image from 'next/image';
 
 const TeamPage: React.FC = () => {
   // const excHubDescription = "ExCHubはエンジニアとクリエイター間での情報交換やプロジェクト創出の場となるコミュニティです";
@@ -37,9 +38,10 @@ const TeamPage: React.FC = () => {
         ))}
       </div>
       <h1 className="text-4xl font-sansita mt-16 mb-1">Presented By</h1>
-      <div className="flex justify-center items-center my-8">
+      <div className="flex justify-center my-8">
         <a href={excHubWebsite} target="_blank" rel="noopener noreferrer">
-          <img src='/team/logo.png' alt='ExC Hub logo' className='mx-auto' />
+          {/* <img src='/team/logo.png' alt='ExC Hub logo' className='w-1/2' /> */}
+          <Image src='/team/logo.png' alt='ExC Hub logo' width={400} height={500} className='object-contain'/>
         </a>
       </div>
       <div className="flex justify-center">
