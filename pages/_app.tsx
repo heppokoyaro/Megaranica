@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import Header from '../components/headers';
+import Footer from '../components/footers';
 import "../styles/globals.css";
 // import '../public/fonts.css';
 
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebProvider activeChain={activeChain}>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </ThirdwebProvider>
   );
 }

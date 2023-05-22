@@ -42,7 +42,7 @@ const Header: React.FC = () => {
             ))}
             <Menu as="div" className="relative">
               <Menu.Button className={`text-lg px-3 ${
-                router.pathname === '/team' ? 'text-pink-500' : 'text-white'
+                (router.pathname === '/team' || router.pathname === '/wp') ? 'text-pink-500' : 'text-white'
               }`}>
                 More
               </Menu.Button>
@@ -60,13 +60,13 @@ const Header: React.FC = () => {
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <a href='https://exchubcrypto.wixsite.com/megaranica/wp' target='_blank' rel='noopener noreferrer'>
+                    <Link href='/wp' passHref>
                       <span className={`${
                         active ? 'bg-gray-500 text-white' : 'text-white'
                       } block px-4 py-2 text-sm`}>
                         WP
                       </span>
-                    </a>
+                    </Link>
                   )}
                 </Menu.Item>
               </Menu.Items>
@@ -116,13 +116,13 @@ const Header: React.FC = () => {
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a href='https://exchubcrypto.wixsite.com/megaranica/wp' target='_blank' rel='noopener noreferrer'>
+                          <Link href='/wp' passHref>
                             <span className={`${
                               active ? 'bg-gray-500 text-white' : 'text-white'
                             } block px-4 py-2 text-sm`}>
                               WP
                             </span>
-                          </a>
+                          </Link>
                         )}
                       </Menu.Item>
                     </div>

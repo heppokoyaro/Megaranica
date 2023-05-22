@@ -36,8 +36,8 @@ const HomePage: React.FC = () => {
       <Head>
         <title>Megaranica World</title>
       </Head>
-      <div className="bg-megaranica min-h-screen flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2 p-3">
+      <div className="bg-megaranica min-h-screen flex flex-col md:flex-row mb-10">
+        <div className="w-full md:w-1/2 p-5">
           <h1 className="text-5xl md:text-7xl m-1 md:m-8 font-sansita leading-tight">Welcome to Megaranica!</h1>
           <p className="m-1 md:m-8 text-1xl md:text-2xl leading-normal">
             "Gesyu's Megaranica friends!" is an NFT character content created by Japanese artist gesyutaruto.<br />It features a cute but somewhat poisonous world. Why don't you enjoy the world I create?

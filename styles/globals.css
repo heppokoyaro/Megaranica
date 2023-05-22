@@ -29,6 +29,7 @@ body {
   border-radius: 25px; /* カードの丸み */
 }
 
+
 /* tailwind css */
 @import "~tailwindcss/base";
 @import "~tailwindcss/components";

@@ -117,3 +117,33 @@
 .logo img {
   filter: invert(1);
 }
+
+
+
+.mapArea {
+  transition: box-shadow 0.3s ease;
+}
+
+.mapArea:hover img {
+  filter: brightness(150%);
+}
+
+
+/* WP */
+.bulletList {
+  list-style-type: none; /* 箇条書きのデフォルトのマーカーを削除 */
+  padding-left: 0; /* 左側の余白を削除 */
+}
+
+.bulletList li {
+  display: flex; /* テキストとアイコンを横並びにするために flex を使用 */
+  align-items: flex-start; /* アイコンとテキストを上揃えにする */
+}
+
+.bulletList li::before {
+  content: "♥"; /* 箇♥条書きのアイコンを設定（例では黒丸） */
+  font-size: 1.5rem; /* アイコンのサイズを調整 */
+  margin-right: 1.5rem; /* アイコンとテキストの間の余白を設定 */
+  color: #f77bcb; /* アイコンの色を設定 */
+}
+
